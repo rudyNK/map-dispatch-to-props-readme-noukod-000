@@ -28,5 +28,5 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { addItem })(App);
+export default connect(state => ({ items: state.items }), { addItem })(App);
 /* ES6 shorthand lets us pass in *one* value that will be read as the key and value */
